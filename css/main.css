@@ -1,0 +1,485 @@
+body {
+	font-family: "Arial";
+	background-color: #090C13;
+}
+.layer1 {
+  background-image: url("../image/bag1.png");
+  position: absolute;
+  left: 50%;
+  margin-left:-960px;
+  top: 0px;
+  width: 1920px;
+  height: 4797px;
+  z-index: -10;
+}
+.layer2 {
+  background-image: url("../image/bag2.png");
+  position: absolute;
+  left: 50%;
+  margin-left:-960px;
+  top: -181px;
+  width: 1920px;
+  height: 950px;
+  z-index: -20;
+}
+.layer3 {
+  background-image: url("../image/bag3.png");
+  position: absolute;
+  left: 50%;
+  margin-left: -960px;
+  top: 0px;
+  width: 1920px;
+  height: 2016px;
+  z-index: -30;
+}
+header {
+	background-color: #1d1f26;
+	position: fixed;
+	left: 50%;
+	margin-left:-580px;
+	top: 20px;
+	width: 1160px;
+	height: 58px;
+	z-index: 670;
+}
+.header {
+	width:100%;
+	height:100%;
+	position: relative;
+	overflow: hidden;
+}
+.header:hover {
+	overflow: visible;
+}
+.nav {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:58px;
+	background-color: #1d1f26;
+	
+}
+
+/*component button bar start*/
+
+.button-bar {
+	overflow: hidden;
+}
+.button-bar > li {
+	border-top: 1px solid #33393f;
+	border-bottom: 1px solid #33393f;
+	border-right: 1px solid #33393f;
+	float: left;
+	width:160px;
+	height: 55px;
+	padding-left:18px;
+	background: url(../image/array-right.png) 10px 31px no-repeat;
+	font-size: 14.411px;
+	color: rgba( 255, 255, 255, 0.902 );
+	font-weight: bold;
+	line-height: 4.363;
+	text-align: left;
+	
+}
+.button-bar > li:first-child {
+	border-left: 1px solid #33393f;
+}
+.button-bar > li > a {
+	width:100%;
+	padding-top: 5px;
+	font-size: 14.411px;
+	font-weight: bold;
+  	line-height: 4.363;
+  	display: block;
+}
+.button-bar > li:hover {
+	background-color: #cfc5b5;
+	color: #303030;
+	border-color: #cfc5b5; 
+	background-position: 10px -14px;
+
+}
+
+/*component button bar end*/
+
+/*component slide bar start*/
+.slide-bar {
+	position: absolute;
+	bottom: 65px;
+	left: 60px;
+}
+
+.slide-bar > li {
+	width:58px;
+	height:33px;
+	padding-top: 25px;
+	color:white;
+	border-top:1px solid rgba(37, 38, 45, .2);
+	border-bottom:1px solid rgba(37, 38, 45, .2);
+	border-right:1px solid rgba(37, 38, 45, .2);
+	float: left;
+	text-align: center;
+	background: url(../image/array-right.png) 15px 29px no-repeat;
+	position: relative;
+}
+
+.slide-bar > li:hover {
+	background-color: white;
+	color:#292928;
+}
+
+.slide-bar > li:hover:after {
+	width:160px;
+	height: 61px;
+	position: absolute;
+	top:-78px;
+	left:-51px;
+	color: white;
+	padding:28px 0 0 25px;
+	background: url(../image/slide-bar-over.png) 0 0 no-repeat;
+	opacity: .8;
+	font-size: 12.213px;
+	text-align: left;
+}
+
+.slide-bar > li:nth-child(2):hover:after {
+	content: "Роскошный облик";
+}
+.slide-bar > li:nth-child(3):hover:after {
+	content: "Новый взгляд";
+}
+.slide-bar > li:nth-child(4):hover:after {
+	content: "Особенности";
+}
+.slide-bar > li:nth-child(5):hover:after {
+	content: "Управление";
+}
+.slide-bar > li:nth-child(6):hover:after {
+	content: "Роскошь салона";
+}
+.slide-bar > li:nth-child(7):hover:after {
+	content: "Комфорт пассажира";
+}
+
+.slide-bar > li:nth-child(2) {
+	border-left:1px solid rgba(37, 38, 45, .2);
+}
+
+.slide-bar > li:first-child {
+	-webkit-border-radius:29px;
+   	-moz-border-radius:29px;
+    border-radius:29px;
+	margin-right: 10px;
+	background: url(../image/slide-bar-array.png) center -58px no-repeat #f2e4cf;
+}
+
+.slide-bar > li:first-child:hover {
+	background: url(../image/slide-bar-array.png) center 0 no-repeat #f2e4cf;
+}
+
+.slide-bar > li:last-child:hover:after {
+	content: none;
+}
+.slide-bar > li:last-child {
+	
+	-webkit-border-radius:29px;
+   	-moz-border-radius:29px;
+    border-radius:29px;
+	margin-left: 10px;
+	background: url(../image/slide-bar-array.png) center -174px no-repeat #f2e4cf;
+}
+
+.slide-bar > li:last-child:hover {
+	background: url(../image/slide-bar-array.png) center -116px no-repeat #f2e4cf;
+}
+
+/*component slide bar end*/
+
+/*component play bar start*/
+.play-bar {
+	width:1095px;
+	margin: 0 auto;
+}
+
+.play-bar > li {
+	width:109px;
+	height: 109px;
+	float: left;
+	position: relative;
+	background: url(../image/play-icons.png) 0 0 no-repeat;
+}
+
+.play-bar > li:nth-child(1) {background-position: 15px 15px;}
+.play-bar > li:nth-child(2) {background-position: -93px 15px;}
+.play-bar > li:nth-child(3) {background-position: -202px 15px;}
+.play-bar > li:nth-child(4) {background-position: -310px 15px;}
+.play-bar > li:nth-child(5) {background-position: -418px 15px;}
+.play-bar > li:nth-child(6) {background-position: -526px 15px;}
+.play-bar > li:nth-child(7) {background-position: -634px 15px;}
+.play-bar > li:nth-child(8) {background-position: -742px 15px;}
+.play-bar > li:nth-child(9) {background-position: -850px 15px;}
+.play-bar > li:nth-child(10) {background-position: -958px 15px;}
+
+.play-bar > li:hover:after {
+	content: " ";
+	width: 112px;
+	height: 212px;
+	left: -1.5px;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../image/play-icons.png);
+	background-repeat: no-repeat;
+}
+
+.play-bar > li > span {
+	display: none;
+	text-align: center;
+	font-size: 11px;
+	font-family: "Arial";
+	color: rgb( 105, 105, 105 );
+	line-height: 1.818;
+	position: absolute;
+	top:120px;
+	padding-bottom:25px;
+	width:100%;
+	background: url(../image/hieroglyph.png) center bottom no-repeat;
+}
+
+.play-bar > li:hover > span {
+	display: block;
+}
+
+.play-bar > li:hover:before {
+	content: " ";
+	width: 112px;
+	height: 112px;
+	position: absolute;
+	z-index: 1;
+	background: url(../image/play-icons.png) -951px -116px no-repeat;
+}
+
+.play-bar > li:nth-child(1):after {background-position: -749px -116px;}
+.play-bar > li:nth-child(2):after {background-position: -512px -116px;}
+.play-bar > li:nth-child(3):after {background-position: -512px -116px;}
+.play-bar > li:nth-child(4):after {background-position: -512px -116px;}
+.play-bar > li:nth-child(5):after {background-position: -749px -116px;}
+.play-bar > li:nth-child(6):after {background-position: -749px -116px;}
+.play-bar > li:nth-child(7):after {background-position: -632px -116px;}
+.play-bar > li:nth-child(8):after {background-position: -749px -116px;}
+.play-bar > li:nth-child(9):after {background-position: -749px -116px;}
+.play-bar > li:nth-child(10):after {background-position: -749px -116px;}
+
+/*component play bar end*/
+
+.new-es {
+	float: left;
+	height:100%;
+	width:185px;
+	margin-left:20px;
+	background: url(../image/text.png) no-repeat center; 
+}
+
+.logo {
+	float: right;
+	height:100%;
+	width: 131px;
+	margin-right: 20px;
+	background: url(../image/logo.png) no-repeat center;
+}
+
+selection {
+	width:1200px;
+	height: 640px;
+	margin: auto;
+	border:1px solid white;
+	display: block;
+	margin-bottom:700px;
+}
+
+selection:first-child {
+	margin-top:280px;
+}
+
+/*1 slide start*/
+.slide1 {
+	padding: 220px 0 0 70px;
+	width:560px;
+}
+
+.slide1 .title {
+	background: url(../image/new_lexus.png) no-repeat;
+	width:516px;
+	height:196px;
+}
+.slide1 .slide1-bar {
+	height: 58px;
+}
+.slide1 .description {
+	font-size: 11px;
+	line-height: 120%;
+	padding: 10px 0;
+	line-height: 1.636;
+	text-align: left;
+	color: rgb( 136, 135, 133 );
+}
+
+/*1 slide end*/
+
+/*2 slide start*/
+
+.slide2 {
+	background: url(../image/slide2.png) no-repeat;
+	position: relative;
+	-webkit-box-shadow:0 0 30px rgba(0,0,0,0.7);
+   	-moz-box-shadow:0 0 30px rgba(0,0,0,0.7);
+    box-shadow:0 0 30px rgba(0,0,0,0.7);
+}
+
+.slide2 > .title {
+	background: url(../image/slide-2-title.png) no-repeat;
+	width: 138px;
+	height:76px;
+	position: absolute;
+	bottom: 140px;
+	left:60px;
+}
+
+.slide2 > .description {
+	position: absolute;
+	top:100px;
+	left:860px;
+	width:250px;
+	height:130px;
+}
+
+.slide2 > .description > .title {
+	font-size: 11px;
+	font-family: "Arial";
+	color: rgb( 23, 23, 23 );
+}
+
+.slide2 > .description > .text {
+	font-size: 11px;
+	font-family: "Arial";
+	color: rgb( 175, 175, 175 );
+	line-height: 2;
+	text-align: left;
+}
+
+/*2 slide end*/
+
+/*3 slide start*/
+.play-bar-content:hover .common-feature {
+	display: none;
+}
+
+.common-feature {
+	font-size: 11px;
+	font-family: "Arial";
+	color: rgb( 105, 105, 105 );
+	line-height: 2;
+	text-align: center;
+	clear: both;
+	padding-top :20px;
+	padding-bottom: 50px;
+	background: url(../image/hieroglyph.png) center bottom no-repeat;
+}
+
+.slide3-feature {
+	width: 100%;
+	height: 285px;
+	background: url(../image/feature.png) center bottom no-repeat;
+	margin-bottom: 15px;
+}
+
+/*3 slide end*/
+
+/*4 slide start*/
+.slider4 {
+	position: relative;
+}
+
+.slider4 .title {
+	background: url(../image/color-label.png) 0 0 no-repeat;
+	position: absolute;
+	left:870px;
+	top:150px;
+	width:275px;
+	height:120px;
+}
+
+.color-picker {
+	position: absolute;
+	left:65px;
+	top:143px;
+}
+
+.color-picker > li {
+	width:41px;
+	height: 41px;
+	float: left;
+	background: url(../image/color-cart.png) 0 0 no-repeat;
+	position: relative;
+}
+
+.color-picker > li.action:after {
+	background: url(../image/color-cart.png) -403px 0 no-repeat;
+	width:40px;
+	height: 40px;
+	position: absolute;
+	content: " ";
+	z-index: -1;
+}
+
+.color-picker > li:nth-child(1){background-position: 7px 0;}
+.color-picker > li:nth-child(2){background-position: -33px 0;}
+.color-picker > li:nth-child(3){background-position: -73px 0;}
+.color-picker > li:nth-child(4){background-position: -113px 0;}
+.color-picker > li:nth-child(5){background-position: -153px 0;}
+.color-picker > li:nth-child(6){background-position: -193px 0;}
+.color-picker > li:nth-child(7){background-position: -233px 0;}
+.color-picker > li:nth-child(8){background-position: -273px 0;}
+.color-picker > li:nth-child(9){background-position: -313px 0;}
+.color-picker > li:nth-child(10){background-position: -353px 0;}
+
+.box-cart {
+	width:987px;
+	height: 364px;
+	position: relative;
+	top:270px;
+	left:105px;
+}
+
+.cart {
+	width:987px;
+	height: 264px;
+	background: url(../image/carts.png) 0 0 no-repeat;
+	position: absolute;
+}
+
+.shadow {
+	background: url(../image/shadow.png) 0 0 no-repeat;
+	width:1078px;
+	height:351px;
+	position: absolute;
+	left: -38px;
+	z-index: -1;
+	top: -31px;
+}
+.wheel-left {
+	position:absolute;
+	width: 103px;
+	height:103px;
+	background: url(../image/wheel.png);
+	left:165px;
+	top:180px;
+}
+.wheel-right {
+	position:absolute;
+	width: 103px;
+	height:103px;
+	background: url(../image/wheel.png);
+	left:752px;
+	top:184px;
+}
+/*4 slide end*/
