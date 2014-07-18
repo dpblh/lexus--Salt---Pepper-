@@ -1,5 +1,5 @@
 body {
-	font-family: "Arial";
+	font-family: Tahoma,Arial,Sans Serif;
 	background-color: #090C13;
 }
 .xok {
@@ -62,6 +62,7 @@ header {
 	position: absolute;
 	top:58px;
 	background-color: #1d1f26;
+	border-top: 1px solid #33393f;
 	
 }
 
@@ -71,15 +72,12 @@ header {
 	overflow: hidden;
 }
 .button-bar > li {
-	border-top: 1px solid #33393f;
-	border-bottom: 1px solid #33393f;
 	border-right: 1px solid #33393f;
 	float: left;
-	width:160px;
-	height: 55px;
+	width:163px;
+	height: 58px;
 	padding-left:18px;
 	background: url(../image/array-right.png) 10px 31px no-repeat;
-	font-size: 14.411px;
 	font-weight: bold;
 	line-height: 4.363;
 	text-align: left;
@@ -90,8 +88,8 @@ header {
 }
 .button-bar > li > a {
 	width:100%;
-	padding-top: 5px;
-	font-size: 14.411px;
+	padding-top: 11px;
+	font-size: 11px;
 	font-weight: bold;
   	line-height: 4.363;
   	display: block;
@@ -101,8 +99,8 @@ header {
 	color: #303030;
 }
 .button-bar > li:hover {
-	background-color: #cfc5b5;
-	border-color: #cfc5b5; 
+	background-color: #fff;
+	border-color: #fff; 
 	background-position: 10px -14px;
 
 }
@@ -283,7 +281,7 @@ header {
 	height:100%;
 	width:185px;
 	margin-left:20px;
-	background: url(../image/text.png) no-repeat center; 
+	background: url(../image/text.png) no-repeat center 12px; 
 }
 
 .logo {
@@ -312,7 +310,7 @@ selection:first-child {
 /*1 slide start*/
 .slide1 {
 	padding: 220px 0 0 70px;
-	width:560px;
+	width:550px;
 }
 
 .slide1 .title {
@@ -321,7 +319,19 @@ selection:first-child {
 	height:196px;
 }
 .slide1 .slide1-bar {
-	height: 58px;
+	/*height: 58px;*/
+	/*border-top: 1px solid #33393F;*/
+	/*border-bottom: 1px solid #33393F;*/
+}
+
+.slide1 .slide1-bar > li {
+	border-top: 1px solid #33393F;
+	border-bottom: 1px solid #33393F;
+}
+
+.slide1 .slide1-bar > li:hover {
+	background-color: #cfc5b5;
+	border-color: #cfc5b5;
 }
 .slide1 .description {
 	font-size: 11px;

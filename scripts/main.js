@@ -16,7 +16,6 @@ $(function(){
 
 	// init state
 
-	magnetic(true);
 
 	$('a[href*=#]:not([href=#])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -34,9 +33,12 @@ $(function(){
 	wind.bind('scroll', function(e){
 		var scrollTop = wind.scrollTop();
 		layer1.css('top', (0 - (scrollTop * -0.1)) + 'px');
-		layer2.css('background-position', '0px ' + (0 - (scrollTop * -0.35)) + 'px');
+		layer2.css('background-position', '0px ' + (0 - (scrollTop * -0.65)) + 'px');
 		layer3.css('background-position', '0px ' + (0 - (scrollTop * -0.15)) + 'px');
 	})
+
+	magnetic(true);
+
 
 
 //  init color picker
