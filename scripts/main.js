@@ -83,18 +83,23 @@ $(function(){
 		// blockHandler = true;
 		// console.log(blockHandler + " blockHandler")
 		var scroll = $(window).scrollTop();
-		slide1dif = Math.abs(slide1 - scroll);
-		slide2dif = Math.abs(slide2 - scroll);
-		slide3dif = Math.abs(slide3 - scroll);
-		slide4dif = Math.abs(slide4 - scroll);
+		slide1dif = slide1 - scroll;
+		slide2dif = slide2 - scroll;
+		slide3dif = slide3 - scroll;
+		slide4dif = slide4 - scroll;
 
-		var min = Math.min(slide1dif, slide2dif, slide3dif, slide4dif);
+		var s1 = Math.abs(getScrollPosition(slide1dif));
+		var s2 = Math.abs(getScrollPosition(slide2dif));
+		var s3 = Math.abs(getScrollPosition(slide3dif));
+		var s4 = Math.abs(getScrollPosition(slide4dif));
+
+		var min = Math.min(s1, s2, s3, s4);
 		console.log(min + ' qqqqqqqqqqqqqqqqq')
 		if (min <= 1)	return;
-		if (slide1dif === min)	scrollTo(slide1, blockAnimate);
-		else if (slide2dif === min)	scrollTo(slide2, blockAnimate);
-		else if (slide3dif === min)	scrollTo(slide3, blockAnimate);
-		else if (slide4dif === min)	scrollTo(slide4, blockAnimate);
+		if (s1 === min)	scrollTo(slide1, blockAnimate);
+		else if (s2 === min)	scrollTo(slide2, blockAnimate);
+		else if (s3 === min)	scrollTo(slide3, blockAnimate);
+		else if (s4 === min)	scrollTo(slide4, blockAnimate);
 	}
 
 	function scrollTo(top, blockAnimate){
@@ -103,11 +108,11 @@ $(function(){
 			// blockHandler = false;
 			// console.log(blockAnimate + " blockAnimate")
 		});
-		$('header').stop(true, false).animate({top : getHeaderScrollPosition()}, blockAnimate ? 0 : 1000, 'easeInOutQuint');
+		$('header').stop(true, false).animate({top : getHeaderScrollPosition(getScrollPosition(top))}, blockAnimate ? 0 : 1000, 'easeInOutQuint');
 	}
 
-	function getHeaderScrollPosition(){
-		return isTop() ?	20 : (($(window).height() - 640) / 2) + 20;
+	function getHeaderScrollPosition(diffScroll){
+		return isTop() ? 20 : (($(window).height() - 640) / 2) + 20 + (diffScroll < 0 ? diffScroll : 0);
 	}
 
 	function getScrollPosition(top){
