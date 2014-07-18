@@ -32,9 +32,10 @@ $(function(){
 
 	wind.bind('scroll', function(e){
 		var scrollTop = wind.scrollTop();
-		layer1.css('top', (0 - (scrollTop * -0.1)) + 'px');
-		layer2.css('background-position', '0px ' + (0 - (scrollTop * -0.65)) + 'px');
-		layer3.css('background-position', '0px ' + (0 - (scrollTop * -0.15)) + 'px');
+		// layer1.css('top', (0 - (scrollTop * -0.1)) + 'px');
+		// layer2.css('background-position', '0px ' + (0 - (scrollTop * -0.80)) + 'px');
+		layer2.css('top', (scrollTop * 0.28) + 'px');
+		// layer3.css('background-position', '0px ' + (0 - (scrollTop * -0.15)) + 'px');
 	})
 
 	magnetic(true);
@@ -76,16 +77,20 @@ $(function(){
 
 //  magnetic setup
 	var timer;
+		window.timeoutsprite = false;
 
 	wind.bind('scroll', setMagnetic);
 	wind.resize(setMagnetic);
 	
 	function setMagnetic(e){
+		if (window.timeoutsprite)	return;
 		clearTimeout(timer);
 		timer = setTimeout(magnetic, 400);
 	}
 
 	function magnetic(blockAnimate){
+		window.timeoutsprite = true;
+		setTimeout('window.timeoutsprite = false', 500);
 		var scroll = wind.scrollTop();
 		slide1dif = slide1 - scroll;
 		slide2dif = slide2 - scroll;

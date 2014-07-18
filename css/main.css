@@ -8,7 +8,7 @@ body {
 	overflow: hidden;
 }
 .layer1 {
-  background-image: url("../image/bag1.png");
+  /*background-image: url("../image/bag1.png");*/
   position: absolute;
   left: 50%;
   margin-left:-960px;
@@ -17,18 +17,28 @@ body {
   height: 4797px;
   z-index: -10;
 }
+.layer1_1 {
+	width: 1920px;
+	height: 1657px;
+	background: url(../image/layer_1_1.png) 0 0 no-repeat;
+}
+.layer1_2 {
+	width: 1920px;
+	height: 3140px;
+	background: url(../image/layer_1_2.jpg) 0 0 no-repeat;
+}
 .layer2 {
-  background-image: url("../image/bag2.png");
+  background: url("../image/layer_2.jpg") 0 0 no-repeat;
   position: absolute;
   left: 50%;
-  margin-left:-960px;
-  top: -181px;
+  margin-left: -960px;
+  top: 0px;
   width: 1920px;
-  height: 950px;
+  height: 2016px;
   z-index: -20;
 }
-.layer3 {
-  background-image: url("../image/bag3.png");
+/*.layer3 {
+  background: url("../image/bag3.png") 0 0 no-repeat;
   position: absolute;
   left: 50%;
   margin-left: -960px;
@@ -36,7 +46,7 @@ body {
   width: 1920px;
   height: 2016px;
   z-index: -30;
-}
+}*/
 header {
 	background-color: #1d1f26;
 	position: fixed;
@@ -319,6 +329,7 @@ selection:first-child {
 	height:196px;
 }
 .slide1 .slide1-bar {
+	width: 1000px;
 	/*height: 58px;*/
 	/*border-top: 1px solid #33393F;*/
 	/*border-bottom: 1px solid #33393F;*/
@@ -347,7 +358,7 @@ selection:first-child {
 /*2 slide start*/
 
 .slide2 {
-	background: url(../image/slide2.png) no-repeat;
+	background: url(../image/slide2.jpg) no-repeat;
 	position: relative;
 	-webkit-box-shadow:0 0 30px rgba(0,0,0,0.7);
    	-moz-box-shadow:0 0 30px rgba(0,0,0,0.7);
