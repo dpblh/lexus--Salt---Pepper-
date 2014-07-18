@@ -2,8 +2,10 @@ body {
 	font-family: "Arial";
 	background-color: #090C13;
 }
-div {
+.xok {
+	min-width: 1200px;
 	position: relative;
+	overflow: hidden;
 }
 .layer1 {
   background-image: url("../image/bag1.png");
@@ -298,7 +300,9 @@ selection {
 	margin: auto;
 	/*border:1px solid white;*/
 	display: block;
-	margin-bottom:700px;
+	margin:0px 0px 700px -600px;
+	position: relative;
+	left: 50%;
 }
 
 selection:first-child {
