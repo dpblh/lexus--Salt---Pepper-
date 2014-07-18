@@ -24,7 +24,7 @@ $(function(){
 			if (target.length) {
 			body.animate({
 				scrollTop: getScrollPosition(target.offset().top)
-				}, 3000, 'easeInOutQuint');
+				}, 2800, 'easeInOutExpo');
 			return false;
 			}
 		}
@@ -82,7 +82,7 @@ $(function(){
 	
 	function setMagnetic(e){
 		clearTimeout(timer);
-		timer = setTimeout(magnetic, 2000);
+		timer = setTimeout(magnetic, 400);
 	}
 
 	function magnetic(blockAnimate){
@@ -107,8 +107,8 @@ $(function(){
 
 	function scrollTo(top, blockAnimate){
 		console.log(top + " top " + getScrollPosition(top) )
-		body.stop(true, false).animate({scrollTop: getScrollPosition(top)}, blockAnimate ? 0 : 1000, 'easeInOutQuint');
-		header.stop(true, false).animate({top : getHeaderScrollPosition(getScrollPosition(top))}, blockAnimate ? 0 : 1000, 'easeInOutQuint');
+		body.stop(true, false).animate({scrollTop: getScrollPosition(top)}, blockAnimate ? 0 : 2800, 'easeInOutExpo');
+		header.stop(true, false).animate({top : getHeaderScrollPosition(getScrollPosition(top))}, blockAnimate ? 0 : 2800, 'easeInOutExpo');
 	}
 
 	function getHeaderScrollPosition(diffScroll){
